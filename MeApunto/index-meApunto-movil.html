@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Me Apunto</title>
+<link rel="stylesheet" href="/css/reset.css">
+<style>
+    *{
+        box-sizing: border-box;
+    }
+
+    body{
+        margin: 0;
+    }
+    header{
+        width: 100vw;
+        height: 30vh;
+        background-color: rgb(116, 185, 182);
+        /* display: flex;
+        flex-flow: column; */
+    }
+    h1{
+        margin: auto;
+        font-size: xxx-large;
+        color: rgb(233, 14, 204);
+    }
+    main{
+        width: 100vw;
+                /* display: flex; */
+        /* flex-direction: column; */
+        background: url(/img/Fondo-Fijo.jpeg) fixed;
+            /* background-size: cover; */
+        /* filter: brightness(200%); */
+        background-size: cover;
+        background-blend-mode:color-burn;
+    }   
+    
+    .pOfertas{
+        margin-top: 0;
+        width: 100%;
+        /* margin: auto; */
+        background-color: aquamarine;
+        text-align: center;
+        line-height: 2rem;
+        font-size: larger;
+        font-weight: bold;
+        font-family: sans-serif;
+    }
+    .dCabecera{
+        height: 88.5%;
+        display: flex;
+        justify-content: center;
+
+    }
+    .logoMeApunto{
+        width: 20%;
+        height: 100%;
+        
+        /* background-color: white; */
+        /* border: 1px solid black; */
+        object-fit: scale-down;
+        
+    }
+    .menuV{
+        width: 80%;
+        height: 100%;
+        
+        /* background-color: white; */
+        /* border: 1px solid black; */
+        object-fit: scale-down;
+        /* border-radius: 50px; */
+    }
+    .cabecera1{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        /* border: 1px solid black; */
+    }
+    .sHeader{
+        width: 60%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    ul{
+        display: flex;
+        justify-content: space-around;
+    }
+    .miContenedor{
+        width: 80%;
+        height: 85vh;
+        border: 1px solid black;
+        border-radius: 10px;
+        box-shadow: 5px 10px rgb(94, 98, 97);
+        background-color: rgb(243, 255, 6);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+    }
+    .elTodo{
+        width: 100vw;
+        height: 100vh; 
+    }
+    .box{
+                margin: auto;
+                border: 10px solid lightseagreen; 
+                background-color: seagreen;
+                width: 95%; 
+                height: 30vh;
+    }
+    nav{
+        height: 20%;
+    }
+
+/* SI ANCHO DE PANTALLA ES MENOR A 1270px QUEREMOS QUE PINTE 1 CAJA
+EL MÁXIMO ANCHO PARA PINTAR UNA CAJA ES 1270px */
+@media (max-width:1270px){
+    .elTodo{
+                display: flex;
+                flex-wrap: wrap;
+            }
+    .box{
+        width: 60vw;
+        background-color: lightpink;
+    }
+    .ejemploFlickr{
+        width: 58vw ;
+        object-fit: cover;
+    }
+    .menuH{
+        visibility: hidden;
+    }
+    /* .menuV{
+        width: 80%;
+        height: 70%;
+    } */
+            
+}
+
+/* SI ANCHO DE PANTALLA ES MAYOR A 1270px QUEREMOS QUE PINTE 3 CAJAS 
+EL MÍNIMO ANCHO DE PANTALLA PARA PINTAR 3 CAJAS ES DE 1270px*/
+@media (min-width: 1270px){
+            .elTodo{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .box{
+                width: 30vw;
+            }
+            .ejemploFlickr{
+                width: 29vw ;
+                object-fit: cover;
+            }
+            .menuH{
+                width: 100%;
+                height: 30%;
+                visibility: visible;
+                font-size: larger;
+                font-weight: bolder;
+                color: seagreen;
+
+            }
+            /* .menuV{
+                visibility: hidden;
+            } */
+            .sHeader{
+            width: 80%;         
+            }
+            .cabecera1{
+                width: 0;
+            }
+        }
+
+</style>
+</head>
+<body class="elTodo">
+    <header>
+        <p class="pOfertas">Ofertas de la semana!!</p>
+        <div class="dCabecera">
+            <!-- Logo -->
+            <img class="logoMeApunto" src="/img/logo1.png" alt="Logo">
+            <!-- PARA MÓVIL ESTA SECCIÓN OCUPARÁ EL 60% CON MENÚ A LA DERECHA
+            VERTICAL Y PARA PANTALLAS GRANDES OCUPARÁ TODO HACIA LA DERECHA Y EL MENÚ SERÁ
+        HORIZONTAL DEBAJO DEL H1 -->
+            <section class="sHeader">
+                <h1>ME APUNTO</h1>
+                <nav class="menuH">
+                    <ul>
+                        <li>Dos Agujas</li>
+                        <li>Aguja Circular</li>
+                        <li>Crochet</li>
+                        <li>Con manos</li>
+                        <li>Macramé</li>
+                    </ul>
+                </nav>
+            </section>
+            <section class="cabecera1">
+                <img class="menuV" src="/img/menuV-blanco.png" alt="Logo">
+                <!-- <nav>
+                    <ul class="menuV">
+                        <img src="/img/menuV-blanco.png" alt="menuV">
+                        
+                    </ul>
+                </nav> -->
+            </section>
+        </div>
+    </header>
+    <main>
+        
+        <div class="box">
+            <img class="ejemploFlickr" src="https://loremflickr.com/320/240/knitting" />
+        </div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+</main>
+    <!-- ************ COMENTADO SÓLO PARA PROBAR EL MEDIA QUERY **************** -->
+    <!-- <header>
+        <p class="pOfertas">Ofertas de la semana!!</p>
+        <div class="dCabecera">
+            <img class="logoMeApunto" src="" alt="Logo">
+            <section class="sHeader">
+                <h1>ME APUNTO</h1>
+                <nav>
+                    <ul>
+                        <li>Opción 1</li>
+                        <li>Opción 2</li>
+                        <li>Opción 3</li>
+                        <li>Opción 4</li>
+                        <li>Opción 5</li>
+                    </ul>
+                </nav>
+            </section>
+            <section class="logoMeApunto">
+
+            </section>
+        </div>
+    </header>
+    <main id="cuerpo">
+
+        <section id="cont1" class="miContenedor">
+           <h2 class="tituloSeccion">SECCION 1</h2>
+            <p id="txtContenido">Lorem ipsum dolor sit amet consectetur adipisicing elit. A dolores atque odio tempora sint, excepturi sed? Cupiditate quasi molestiae, mollitia quaerat porro nihil, odio velit eaque tempore explicabo aliquam tenetur rerum accusamus repudiandae quia dignissimos quibusdam temporibus assumenda culpa vel eius enim asperiores! Nostrum alias cupiditate ea eligendi non et eos maiores iusto error, recusandae iure, esse ratione eum voluptatum nemo ipsa molestiae, hic amet corporis? Sequi dolor saepe fugiat illum sed iure unde, maiores perspiciatis, officia quis aliquam, quam enim nesciunt corporis ipsam. Commodi officia aut incidunt numquam recusandae similique, voluptates quod, expedita maiores, quaerat adipisci earum cupiditate! Cumque?</p>
+            <a href="#cabecera" title="Ir al inicio de mi pagina">Volver al inicio</a>
+        </section>
+    </main>
+    <footer>
+
+    </footer> -->
+    
+</body>
+</html>
